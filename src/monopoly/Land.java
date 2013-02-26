@@ -11,9 +11,6 @@ public class Land {
         this.num = num;
         this.level = level;
         this.type = type;
-    }
-
-    public int getPrice() {
         if (type == 1)
             price = 200;
         else if (type == 2)
@@ -21,7 +18,10 @@ public class Land {
         else if (type == 3)
             price = 300;
         else
-            return 0;
+            price = 0;
+    }
+
+    public int getPrice() {
         return price;
     }
 
@@ -39,5 +39,10 @@ public class Land {
 
     public Player getOwner() {
         return owner;
+    }
+
+    public void sold() {
+        owner = (Player)null;
+        this.level = 0;
     }
 }

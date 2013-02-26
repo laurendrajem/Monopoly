@@ -55,4 +55,14 @@ public class Player {
         payForLand(land.getPrice());
         land.setOwner(this);
     }
+
+    public void updateLand(Land land) {
+        land.levelUp();
+    }
+
+    public void sellLand(Land land) {
+        landNum -= 1;
+        this.earnMoney(land.getSellPrice());
+        land.sold();
+    }
 }
