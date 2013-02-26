@@ -50,4 +50,9 @@ public class Player {
     public void earnMoney(int money) {
         this.money += money;
     }
+
+    public void buyLand(Land land) {
+        payForLand(land.getPrice());
+        land.setOwner(this);
+    }
 }
