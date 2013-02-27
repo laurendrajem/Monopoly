@@ -21,14 +21,6 @@ public class TestForPlayer {
     }
 
     @Test
-    public  void test_for_player_pay_for_land(){
-        Player player = new Player("name",1,1000);
-        player.payForLand(200);
-        assertThat(player.getMoney(),is(800));
-        assertThat(player.getLandNum(),is(1));
-    }
-
-    @Test
     public void test_for_player_pay_for_others(){
         Player player1 = new Player("name1",1,1000);
         Player player2 = new Player("name2",1,1000);
@@ -43,4 +35,5 @@ public class TestForPlayer {
         player.earnMoney(200);
         assertThat(player.getMoney(),is(1200));
     }
+
 }
