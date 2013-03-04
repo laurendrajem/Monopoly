@@ -8,9 +8,11 @@ public class LandType {
         else if (typeNum == 2) {
             return new TypeTwo();
         }
-        else {
+        else if (typeNum == 3) {
             return new TypeThree();
         }
+        else
+            return new TypeOthers();
     }
 
     int getTypePrice() {
