@@ -19,6 +19,23 @@ public class Player {
         this.money = money;
     }
 
+    public Player(int playerNum,int money) {
+        this.position = 0;
+        this.money = money;
+        if (1 == playerNum ) {
+            this.name = "钱夫人";
+        }
+        else if (2 == playerNum) {
+            this.name = "阿土伯";
+        }
+        else if (3 == playerNum) {
+            this.name = "孙小美";
+        }
+        else if (4 == playerNum) {
+            this.name = "金贝贝";
+        }
+    }
+
     public void move(int steps) {
         this.position = (steps + position) % 70;
     }
