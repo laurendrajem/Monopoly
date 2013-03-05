@@ -59,6 +59,7 @@ public class Player {
     }
 
     public void updateLand(Land land) {
+        this.money -= land.getPrice();
         land.levelUp();
     }
 

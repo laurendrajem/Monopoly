@@ -38,4 +38,8 @@ public class Land {
         owner = (Player)null;
         this.level = 0;
     }
+
+    public int getToll() {
+        return (int) (0.5*price) * (int) Math.pow(2,(level));
+    }
 }
